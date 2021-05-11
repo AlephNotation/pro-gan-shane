@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  test:
+    image: ufoym/deepo
+    command: nvidia-smi
+    runtime: nvidia
+
+  model:
+    runtime: nvidia
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/basin/
+    #command: python train.py --path /home/aleph/basin/new-art/wikiart/images/matisse --trial_name experiment-1 --z_dim 100 --batch_size 4 --init_step 2 --total_iter 300000 --pixel_norm --tanh
+    command: sh train.sh
+    stdin_open: true
+    tty: true 

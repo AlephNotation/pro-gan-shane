@@ -1,0 +1,4 @@
+{
+    "python.formatting.provider": "black",
+    "python.pythonPath": "/home/aleph/.pyenv/versions/3.8.5/envs/new_art/bin/python"
+}
