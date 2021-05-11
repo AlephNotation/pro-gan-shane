@@ -1,3 +1,7 @@
 *.jpg
 models/images
 models/trial*
+.ipynb_checkpoints/*
+*.ipynb
+
+*.pyc
